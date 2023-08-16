@@ -16,7 +16,7 @@
         <ApplicationTitle>RaspPlayer</ApplicationTitle>
 
         <!-- App Identifier -->
-        <ApplicationId>com.companyname.raspplayer</ApplicationId>
+        <ApplicationId>com.modelingevolution.raspplayer</ApplicationId>
         <ApplicationIdGuid>9F97B76D-3764-49AC-9FE3-BB8D93F8CBD8</ApplicationIdGuid>
 
         <!-- Versions -->
@@ -37,13 +37,14 @@
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 		<AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
 	</PropertyGroup>
     <ItemGroup>
         <!-- App Icon -->
-        <MauiIcon Include="Resources\AppIcon\appicon.svg"  />
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" />
 
         <!-- Splash Screen -->
-        <MauiSplashScreen Include="Resources\Splash\splash.svg"  />
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" />
 
         <!-- Images -->
         <MauiImage Include="Resources\Images\*" />

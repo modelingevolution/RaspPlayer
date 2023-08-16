@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:videoView="clr-namespace:RaspPlayer.VideoView"
+             x:Class="RaspPlayer.Fullscreen.FullscreenVideo"
+             xmlns:icons="clr-namespace:ModelingEvolution.MauiControls.Icons;assembly=ModelingEvolution.MauiControls"
+            
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <AbsoluteLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ChangeToolbarStateCommand}" />
+            </AbsoluteLayout.GestureRecognizers>
+            <AbsoluteLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+                <videoView:VideoView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                     Source="{Binding Source}" x:Name="Video" />
+            </AbsoluteLayout>
+            
+            <FlexLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 0.1"
+                        BackgroundColor="Transparent"
+                        Direction="Row"
+                        AlignItems="Center"
+                        IsVisible="{Binding ToolbarVisible}">
+                <icons:IconButton
+                    Command="{Binding CloseFullscreenCommand }"
+                    Clicked="OnReturnButtonClicked"
+                    Background="Transparent"
+                    ActiveColor="Transparent"
+                    DisabledColor="Transparent"
+                    Icon="{x:Static icons:MaterialIcon.ArrowLeft}" />
+                <Label Text="{Binding Name}" TextColor="White" />
+            </FlexLayout>
+            <VerticalStackLayout IsVisible="{Binding ToolbarVisible}"
+                                 AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0.2, 1, 0.5">
+                <VerticalStackLayout.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="White" />
+                        <Setter Property="Opacity" Value="0.7" />
+                    </Style>
+                </VerticalStackLayout.Resources>
+          
+            </VerticalStackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

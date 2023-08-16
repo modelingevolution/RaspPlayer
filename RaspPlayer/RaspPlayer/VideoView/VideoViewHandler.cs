@@ -1,7 +1,7 @@
-using MePlayer.Platforms.Android;
+using RaspPlayer.Platforms.Android;
 using Microsoft.Maui.Handlers;
 
-namespace MePlayer.VideoView;
+namespace RaspPlayer.VideoView;
 
 public partial class VideoViewHandler : ViewHandler<VideoView, MauiVideoView>
 {

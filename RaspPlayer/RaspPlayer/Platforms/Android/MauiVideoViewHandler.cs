@@ -1,6 +1,6 @@
 using Android.OS;
 
-namespace MePlayer.Platforms.Android;
+namespace RaspPlayer.Platforms.Android;
 
 public class MauiVideoViewHandler : Handler
 {

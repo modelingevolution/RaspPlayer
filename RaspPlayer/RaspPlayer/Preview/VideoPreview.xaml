@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:videoView="clr-namespace:RaspPlayer.VideoView"
+             x:Class="RaspPlayer.Preview.VideoPreview"
+             x:Name="Me">
+    <ContentView.Content>
+        <AbsoluteLayout>
+            <AbsoluteLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ViewModel.OpenFullscreenCommand, Source={x:Reference Me}}" />
+            </AbsoluteLayout.GestureRecognizers>
+            <videoView:VideoView Source="{Binding ViewModel.Rasp.DeviceSerialNumber, Source={x:Reference Me}}"
+                                 x:Name="Video"
+                                 AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 0.7" />
+           
+            <AbsoluteLayout BackgroundColor="{StaticResource Primary}"
+                            AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 1, 1, 0.3">
+
+                <VerticalStackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                     VerticalOptions="Start" Margin="5, 2">
+                    <VerticalStackLayout.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="TextColor" Value="White" />
+                            <Setter Property="HorizontalTextAlignment" Value="Center" />
+                            <Setter Property="VerticalTextAlignment" Value="Center" />
+                        </Style>
+                    </VerticalStackLayout.Resources>
+                    <Label Text="{Binding ViewModel.Rasp.Name, Source={x:Reference Me}}" />
+                </VerticalStackLayout>
+             
+                <VerticalStackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                                     HorizontalOptions="End" VerticalOptions="End">
+                </VerticalStackLayout>
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+    </ContentView.Content>
+</ContentView>

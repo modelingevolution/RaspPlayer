@@ -4,16 +4,13 @@ using Android.Graphics;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using MePlayer.Player;
-using MePlayer.VideoView;
-using Microsoft.Maui.Controls.Compatibility;
-using RaspPlayer;
 using RaspPlayer.Player;
+using RaspPlayer.VideoView;
 using Color = Android.Graphics.Color;
 using ProgressBar = Android.Widget.ProgressBar;
 using Timer = System.Timers.Timer;
 
-namespace MePlayer.Platforms.Android;
+namespace RaspPlayer.Platforms.Android;
 
 public class MauiVideoView : RelativeLayout, IMauiVideoView, ISurfaceHolderCallback
 {

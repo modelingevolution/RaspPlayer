@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="RaspPlayer.AddRaspPage">
+
+    <VerticalStackLayout BackgroundColor="{StaticResource Background}">
+        <Entry x:Name="Name"
+               Placeholder="Enter name of Raspberry"
+               ClearButtonVisibility="WhileEditing"
+               HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+               MaxLength="24" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"/>
+        <Entry x:Name="Hostname"
+               Placeholder="Enter hostname of Raspberry"
+               ClearButtonVisibility="WhileEditing"
+               MaxLength="15"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+     
+        <Button x:Name="AddRaspButton" IsVisible="True" Text="Add Raspberry Pi" Clicked="OnAddRasp"  TextColor="White"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" ></Button>
+       
+    </VerticalStackLayout>
+
+
+</ContentPage>

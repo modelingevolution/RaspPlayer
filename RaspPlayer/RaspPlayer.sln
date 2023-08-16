@@ -4,6 +4,10 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaspPlayer", "RaspPlayer\RaspPlayer.csproj", "{31A9AD2D-B0EE-4817-AB71-6B1F107F9DCA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazoReactor", "..\submodules\Source\BlazoReactor\BlazoReactor.csproj", "{93EBCECD-B8F7-4518-8F0E-52D028BD0E05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelingEvolution.MauiControls", "..\MauiControls\ModelingEvolution.MauiControls\ModelingEvolution.MauiControls.csproj", "{43D7EC9A-99F0-4510-9110-6E9F8F8299A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,11 +20,20 @@ Global
 		{31A9AD2D-B0EE-4817-AB71-6B1F107F9DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31A9AD2D-B0EE-4817-AB71-6B1F107F9DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{31A9AD2D-B0EE-4817-AB71-6B1F107F9DCA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{93EBCECD-B8F7-4518-8F0E-52D028BD0E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93EBCECD-B8F7-4518-8F0E-52D028BD0E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93EBCECD-B8F7-4518-8F0E-52D028BD0E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93EBCECD-B8F7-4518-8F0E-52D028BD0E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D7EC9A-99F0-4510-9110-6E9F8F8299A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D7EC9A-99F0-4510-9110-6E9F8F8299A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D7EC9A-99F0-4510-9110-6E9F8F8299A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D7EC9A-99F0-4510-9110-6E9F8F8299A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF79F486-C305-454E-8D97-A8D5CB4E1147}
 		        SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 	EndGlobalSection
 EndGlobal

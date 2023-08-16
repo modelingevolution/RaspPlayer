@@ -1,4 +1,4 @@
-namespace MePlayer.VideoView;
+namespace RaspPlayer.VideoView;
 
 public interface IMauiVideoView
 {

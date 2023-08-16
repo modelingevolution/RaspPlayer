@@ -1,6 +1,6 @@
 using Android.Content.Res;
 
-namespace MePlayer.Platforms.Android;
+namespace RaspPlayer.Platforms.Android;
 
 public static class ExtensionsMethods
 {

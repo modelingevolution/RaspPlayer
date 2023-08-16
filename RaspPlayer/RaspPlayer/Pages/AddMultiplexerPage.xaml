@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="RaspPlayer.AddMultiplexerPage"
+             x:Name="Me">
+
+    <VerticalStackLayout BackgroundColor="{StaticResource Background}">
+        <Entry x:Name="Hostname"
+               Placeholder="Enter hostname of multiplexer"
+               Text="{Binding MultiplexerOptions.Host, Source={x:Reference Me}}"
+               ClearButtonVisibility="WhileEditing"
+                HorizontalOptions="CenterAndExpand" VerticalOptions="Center" />
+        <Entry x:Name="Port" Keyboard="Numeric"  
+               Text="{Binding MultiplexerOptions.Port, Source={x:Reference Me}}"
+               Placeholder="Enter tcp port of multiplexer"
+               ClearButtonVisibility="WhileEditing"
+               MaxLength="15"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" >
+            <Entry.Behaviors>
+                <behaviors:NumericValidationBehavior  MinimumValue="0"
+                                                      MaximumValue="9999"   
+                                                      MaximumDecimalPlaces="0"/>
+            </Entry.Behaviors>
+        </Entry>
+        <Button x:Name="SaveOptions" IsVisible="True" Clicked="OnSaveOptions" Text="Save"  TextColor="White"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center" ></Button>
+       
+    </VerticalStackLayout>
+
+
+</ContentPage>

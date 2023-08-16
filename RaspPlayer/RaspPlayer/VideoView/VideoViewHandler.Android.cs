@@ -1,6 +1,6 @@
-using MePlayer.Platforms.Android;
+using RaspPlayer.Platforms.Android;
 
-namespace MePlayer.VideoView;
+namespace RaspPlayer.VideoView;
 
 public partial class VideoViewHandler
 {

@@ -1,0 +1,11 @@
+[Unit]
+Description=App to stream video from camera.
+
+[Service]
+EnvironmentFile=/etc/libcamera-vid/libcamera-vid.conf
+ExecStart=libcamera-vid --width ${WIDTH} --height ${HEIGHT} -g ${FPS} -t 0 --inline --listen -o tcp://0.0.0.0:${VIDEO_PORT}
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

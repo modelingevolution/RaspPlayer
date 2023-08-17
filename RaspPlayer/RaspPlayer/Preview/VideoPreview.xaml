@@ -27,6 +27,7 @@
                         </Style>
                     </VerticalStackLayout.Resources>
                     <Label Text="{Binding ViewModel.Rasp.Name, Source={x:Reference Me}}" />
+                    <Label Text="{Binding ViewModel.Rasp.DeviceSerialNumber, Source={x:Reference Me}}" />
                 </VerticalStackLayout>
              
                 <VerticalStackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"

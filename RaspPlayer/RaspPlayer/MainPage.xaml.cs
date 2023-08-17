@@ -56,11 +56,7 @@ public partial class MainPage : ContentPage
             _options.Host = options.Host;
             _options.Port = options.Port;
         }
-        else
-        {
-            await Task.Run(LoadBasePreviews);
-            return;
-        }
+
 
         string cameraConfigPath = Path.Combine(FileSystem.AppDataDirectory, "camerasConfig.json");
         if (File.Exists(cameraConfigPath))
@@ -72,12 +68,8 @@ public partial class MainPage : ContentPage
                 _rasps.Index.Add(rasp);
             }
         }
-        else
-        {
-            await Task.Run(LoadBasePreviews);
-            return;
-        }
         await Task.Run(ConnectToMultiplexerAndLoadPreviews);
+
 
     }
 
@@ -92,15 +84,7 @@ public partial class MainPage : ContentPage
 
     }
 
-    private async Task LoadBasePreviews()
-    {
-        await MainThread.InvokeOnMainThreadAsync(() =>
-        {
-            LoadPreviews();
-            LoadingLayout.IsVisible = false;
-            PreviewsLayout.IsVisible = true;
-        });
-    }
+    
     private async Task ConnectToMultiplexerAndLoadPreviews()
     {
         while (true)

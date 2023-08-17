@@ -30,10 +30,15 @@ public class MultiplexerProxy
 
         _validUntill = DateTime.Now.AddSeconds(10);
         using var client = new TcpClient();
-        
+        client.ReceiveTimeout = 3;
         try
         {
-            client.Connect(_multiplexerOptions.Host, _multiplexerOptions.Port);
+            var result = client.BeginConnect(_multiplexerOptions.Host, _multiplexerOptions.Port,null,null);
+            var success = result.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(1));
+            if (!success)
+            {
+                throw new Exception("Failed to connect.");
+            }
             _lastValue = true;
             return true;
         }

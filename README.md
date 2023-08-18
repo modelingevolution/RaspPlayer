@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/modelingevolution/RaspPlayer">
     <img src="RaspPlayer/RaspPlayer/Resources/AppIcon/logo-white.png" alt="Logo" >
   </a>
 
